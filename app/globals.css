@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--bg:#08080b;--ink:#f3efe6;--mute:#a7a29a;--gold:#cfae6b;--line:rgba(243,239,230,.14)}
+html{scroll-behavior:smooth;color-scheme:dark;scroll-padding-top:4.5rem}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body),system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-display),var(--font-body),serif;line-height:1.3}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* Cinematic aurora: gradients only, animated with transform (GPU, no blur filter, no video) */
+.aurora{position:absolute;inset:-20%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(40% 35% at 30% 30%,rgba(207,174,107,.30),transparent 70%),
+    radial-gradient(35% 40% at 75% 60%,rgba(40,125,112,.32),transparent 70%),
+    radial-gradient(30% 30% at 50% 95%,rgba(110,70,165,.24),transparent 70%);
+  animation:drift 26s ease-in-out infinite alternate;will-change:transform}
+@keyframes drift{to{transform:translate3d(4%,3%,0) scale(1.08)}}
+
+/* Below-the-fold sections are skipped by the renderer until needed */
+.sec{content-visibility:auto;contain-intrinsic-size:auto 720px}
+
+/* Scroll reveal in pure CSS (no JS). Browsers without support simply show content. */
+@keyframes rise{from{opacity:0;transform:translate3d(0,22px,0)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+}
+
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+details[open]>summary .plus{transform:rotate(45deg)}
+.plus{transition:transform .2s}
+
+/* Mobile + reduced motion: no parallax/blur/float, no smooth scroll, static aurora */
+@media (max-width:768px),(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .aurora{animation:none;will-change:auto}
+  [data-reveal]{animation:none!important}
+}
