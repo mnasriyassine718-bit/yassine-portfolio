@@ -11,10 +11,19 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: site.title,
   description: site.description,
+  verification: {
+    google: "qf8BGpvHzsY__msJGO5yPprnwiCZtbtpCnzv857c2CI",
+  },
   alternates: { canonical: "/" },
   openGraph: { type: "website", url: site.url, title: site.title, description: site.description, locale: "ar_TN",
+  verification: {
+    google: "qf8BGpvHzsY__msJGO5yPprnwiCZtbtpCnzv857c2CI",
+  },
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: site.title }] },
   twitter: { card: "summary_large_image", title: site.title, description: site.description, images: ["/og.jpg"] },
+  verification: {
+    google: "qf8BGpvHzsY__msJGO5yPprnwiCZtbtpCnzv857c2CI",
+  },
 };
 export const viewport: Viewport = { themeColor: "#08080b", width: "device-width", initialScale: 1 };
 
@@ -25,6 +34,9 @@ const ld = {
       url: site.url, telephone: site.phone, address: { "@type": "PostalAddress", addressCountry: "TN" } },
     { "@type": "ProfessionalService", "@id": `${site.url}/#service`, name: `${site.name} - Web Design & Development`,
       url: site.url, telephone: site.phone, description: site.description, founder: { "@id": `${site.url}/#person` },
+  verification: {
+    google: "qf8BGpvHzsY__msJGO5yPprnwiCZtbtpCnzv857c2CI",
+  },
       address: { "@type": "PostalAddress", addressCountry: "TN" }, areaServed: "Worldwide", sameAs: [site.whatsapp] },
   ],
 };
