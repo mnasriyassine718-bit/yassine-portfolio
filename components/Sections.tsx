@@ -75,7 +75,6 @@ export function Work() {
               </div>
               <h3 className="mt-4 text-lg font-semibold">{p.t}</h3>
               <p className="text-[var(--mute)]">{p.d}</p>
-              <p className="mt-2 text-sm text-[var(--gold)]">{p.tags.join("، ")}</p>
             </article>
           ))}
         </div>
