@@ -22,11 +22,11 @@ export const site = {
     { t: "تسريع وSEO", d: "تحسين موقعك الحالي ليفتح أسرع ويظهر أفضل في البحث." },
   ],
   // image: file in public/images (run `npm run images`), 1200px wide WebP
-  projects: [
-    { t: "اسم المشروع الأول", d: "وصف قصير: ماذا بنيت ولمن.", tags: ["Next.js", "UI"], image: "", w: 1200, h: 750 },
-    { t: "اسم المشروع الثاني", d: "وصف قصير: ماذا بنيت ولمن.", tags: ["React", "SEO"], image: "", w: 1200, h: 750 },
-    { t: "اسم المشروع الثالث", d: "وصف قصير: ماذا بنيت ولمن.", tags: ["Tailwind"], image: "", w: 1200, h: 750 },
-  ],
+projects: [
+  { t: "بورتفوليو شخصي", d: "الموقع اللي تشوف فيه توا: تصميم داكن فاخر، عربي/إنجليزي، بدون مكتبات أنيميشن ثقيلة. بُني بـ Next.js وTailwind." },
+  { t: "تجربة صفحة هبوط", d: "صفحة هبوط لمشروع تجريبي: قسم hero متحرك، نموذج تواصل، واختبار سرعة Lighthouse. مشروع تمرين شخصي." },
+  { t: "واجهة متجر (قريبًا)", d: "تصميم واجهة متجر إلكتروني: صفحة منتج، سلة، وصفحة دفع. مشروع قيد التطوير." },
+],  
   // Leave empty until you have real client feedback; the section hides itself.
   testimonials: [] as { q: string; n: string }[],
   // ⚠️ Placeholder prices: replace with yours.
