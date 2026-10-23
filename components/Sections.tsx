@@ -72,7 +72,7 @@ export function Work() {
             <article key={p.t} data-reveal>
               <div className="aspect-[8/5] overflow-hidden rounded-xl border border-[var(--line)] bg-gradient-to-br from-[#1b1a22] to-[#0e0e13]">
                     sizes="(max-width:768px) 100vw, 33vw" loading="lazy" decoding="async" className="h-full w-full object-cover" />
-                )}
+
               </div>
               <h3 className="mt-4 text-lg font-semibold">{p.t}</h3>
               <p className="text-[var(--mute)]">{p.d}</p>
